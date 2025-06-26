@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Concert Downloader</title>
+        <meta charset="utf-8"/>
+        <!-- Bootstrap CSS: -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+            .center {
+                text-align: center;
+            }
+            .loader {
+            width: 48px;
+            height: 48px;
+            border: 3px solid #FFF;
+            border-radius: 50%;
+            display: none;
+            position: relative;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+            } 
+            .loader::after {
+            content: '';  
+            box-sizing: border-box;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-bottom-color: #FF3D00;
+            }
+
+            @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+            } 
+        </style>
+        <script>
+            function showLoader() {
+                document.getElementById("loader").style.display = "inline-block";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="center">
+            <h1 style="color:red">Archive.org Concert Downloader (FLAC)</h1>
+            <h2 style="color:green">Select A Band</h2>
+            <form method="get" onsubmit="showLoader()">
+                {{ form.as_p }}
+                <button type="submit">Search</button>
+            </form>
+            <br />
+            <br />
+            <span id="loader" class="loader"></span>
+        </div>
+        {% if results %}
+            <h2>Results: </h2>
+            <ul>
+                {% for result in results %}
+                    <li>
+                        <strong>{{ result.title }}</strong>
+                        {% if result.flac_url %}
+                            <a href="{{ result.flac_url }}">Download FLAC Zip File</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </body>
+</html>

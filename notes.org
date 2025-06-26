@@ -1,0 +1,6 @@
+* General Django Migration Commands
+#+BEGIN_SRC python
+python manage.py makemigrations
+python manage.py migrate
+python manage.py showmigrations
+#+END_SRC
