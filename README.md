@@ -9,7 +9,7 @@ Now that you have activated the 'venv' virtual environment, you will need to ins
 `pip3 install -r requirements.txt`
 
 You will then need to tie your Internet Archive account to your project as well as I don't distribute my own. This is to cut down on abuse of bandwidth on a specific account, and this project is meant to be just run for personal use:
-ia configure
+`ia configure`
 
 You will need to create an admin account using this command:
 `python manage.py createsuperuser`
