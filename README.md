@@ -26,5 +26,8 @@ You will then need to visit the following page in order to create a new 'Band' d
 
 <img width="323" alt="Screenshot 4" src="https://github.com/user-attachments/assets/29acc5a6-e0fb-481f-9fc3-3ac4e13cb9ae" />
 
+## Mirrors
+This project is also mirrored to BitBucket so that I can also play around with BitBucket Pipelines via CI/CD pipeline scripts:
+- https://bitbucket.org/sambanya/archiveorgconcertdownloader/src/main/
 
 
