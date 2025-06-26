@@ -16,3 +16,15 @@ You will need to create an admin account using this command:
 
 You will then need to visit the following page in order to create a new 'Band' database entry that was created from the 'Band' model. This is so that you can select a new option from the initial dropdown to search for that particular band:
 - http://127.0.0.1:8000/admin/concertdownloader/band/
+
+## Screenshots:
+<img width="1440" alt="Screenshot 1" src="https://github.com/user-attachments/assets/9bac9699-5d5d-4d02-bf01-657aa3b9064f" />
+
+<img width="1440" alt="Screenshot 2" src="https://github.com/user-attachments/assets/8aceb5b5-c17e-4462-8516-c7aa87998798" />
+
+<img width="1440" alt="Screenshot 3" src="https://github.com/user-attachments/assets/f159fb2a-f963-4ba6-a075-ad5f322aeaaf" />
+
+<img width="323" alt="Screenshot 4" src="https://github.com/user-attachments/assets/29acc5a6-e0fb-481f-9fc3-3ac4e13cb9ae" />
+
+
+
